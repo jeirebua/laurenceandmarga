@@ -36,7 +36,7 @@ function HeroSection() {
           </div>
         </div>
         <div
-          className={` ${montserrat.className} absolute bottom-0 space-y-3 md:space-y-0 mb-32 md:mb-24 flex flex-col md:flex-row justify-between items-center w-full text-amber-50 px-2 md:px-0`}
+          className={` ${montserrat.className} mt-16 md:mt-0 md:absolute md:bottom-0 space-y-3 md:space-y-0 md:mb-24 flex flex-col md:flex-row justify-between items-center w-full text-amber-50 px-2 md:px-0`}
         >
           <p className="text-lg md:text-md xl:text-lg">December 17, 2025</p>
           <a
