@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import AOSInit from "@/components/AOSInit";
 
 export const metadata: Metadata = {
   title: "Laurence and Margarette",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+        <AOSInit />
+        {children}
+      </body>
     </html>
   );
 }
