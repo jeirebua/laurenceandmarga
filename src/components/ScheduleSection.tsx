@@ -1,32 +1,31 @@
 import { dancingScript, montserrat } from "@/common/fonts";
 import React from "react";
 
-function FAQSection() {
-  const faqs = [
+function ScheduleSection() {
+  const events = [
     {
-      question: "What is the dress code?",
-      answer:
-        "Please come in traditional attire. Filipiniana for the ladies and Barong for the gentlemen. Our color palette is terracotta and sage green.",
+      time: "2:30 PM",
+      title: "Church Ceremony",
+      description:
+        "We begin our celebration with a heartfelt exchange of vows surrounded by our dearest family and friends.",
     },
     {
-      question: "What time should I arrive?",
-      answer: "Church ceremony at 2:00 pm. Reception starts at 5:00 pm.",
+      time: "4:30 PM",
+      title: "Registration & Welcome",
+      description:
+        "Join us for light bites, photos, and mingling as we welcome everyone to the celebration.",
     },
     {
-      question: "Can I bring a plus one?",
-      answer:
-        "We're keeping the celebration intimate, so invitations are for the guests listed by name. We kindly request no plus ones.",
+      time: "6:30 PM",
+      title: "Dinner Reception",
+      description:
+        "Gather with us for a warm, joyful dinner filled with laughter, stories, and love.",
     },
     {
-      question:
-        "What kind of activities will be available during the reception?",
-      answer:
-        "Expect music, dancing, and a photo booth. There may be a few surprise activities throughout the afternoon as well.",
-    },
-    {
-      question: "How can I get there?",
-      answer:
-        "Please scan the QR code on your invitation to access directions to the venue via Google Maps.",
+      time: "8:30 PM",
+      title: "Thank You Message",
+      description:
+        "Before the night ends, we'll share a few words of gratitude from the heart.",
     },
   ];
 
@@ -38,7 +37,7 @@ function FAQSection() {
           <h2
             className={`${dancingScript.className} text-5xl md:text-7xl text-[#2C2C2C] relative inline-block`}
           >
-            Frequently Asked
+            The Itinerary
             {/* Underline decoration */}
             <svg
               className="absolute left-0 -bottom-1 md:-bottom-2 w-full"
@@ -57,27 +56,29 @@ function FAQSection() {
           </h2>
         </div>
 
-        {/* FAQ List - Two Column Layout */}
+        {/* Events Grid - Two Column Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 md:gap-x-24 gap-y-12 md:gap-y-16">
-          {faqs.map((faq, index) => (
+          {events.map((event, index) => (
             <div
               key={index}
               className="space-y-4"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
-              {/* Question */}
-              <h3
-                className={`${montserrat.className} text-base md:text-lg font-medium text-[#2C2C2C]`}
-              >
-                {faq.question}
-              </h3>
+              {/* Time and Title */}
+              <div className="space-y-2">
+                <h3
+                  className={`${montserrat.className} text-sm md:text-base font-medium tracking-wide uppercase text-[#2C2C2C]`}
+                >
+                  {event.time} — {event.title}
+                </h3>
+              </div>
 
-              {/* Answer */}
+              {/* Description */}
               <p
                 className={`${montserrat.className} text-sm md:text-base text-[#4A4A4A] leading-relaxed font-light`}
               >
-                {faq.answer}
+                {event.description}
               </p>
             </div>
           ))}
@@ -87,4 +88,4 @@ function FAQSection() {
   );
 }
 
-export default FAQSection;
+export default ScheduleSection;
