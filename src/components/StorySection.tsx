@@ -174,7 +174,7 @@ function StorySection() {
               {/* Decorative line above */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-px bg-[#C98858]/40" />
 
-              <p className="text-base md:text-lg leading-relaxed font-light text-center italic">
+              <p className="text-base md:text-lg leading-relaxed font-light text-center italic text-[#2C2C2C]">
                 Their story began with a stubborn girl who wouldn&apos;t share
                 her name and a guy who refused to give up. And somewhere between
                 gym conversations, late-night shows, and one too many TikTok
