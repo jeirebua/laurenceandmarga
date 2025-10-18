@@ -4,17 +4,17 @@ import React from "react";
 function Footer() {
   return (
     <footer className="bg-[#E8DCC8] py-12 md:py-16 relative overflow-hidden">
-      <div className="container mx-auto px-6 md:px-12 max-w-6xl relative z-10">
+      <div className="container mx-auto px-6 md:px-12 max-w-6xl relative z-10 pb-6">
         <div className="text-center">
           {/* Wedding Hashtag */}
           <div data-aos="fade-up" className="mb-6">
             <p
-              className={`${montserrat.className} text-sm md:text-base text-[#4A4A4A] uppercase tracking-wide mb-2`}
+              className={`${montserrat.className} text-xs md:text-base text-[#4A4A4A] uppercase tracking-wide mb-2`}
             >
               Share your photos with
             </p>
             <h2
-              className={`${dancingScript.className} text-4xl md:text-6xl text-[#2C2C2C]`}
+              className={`${dancingScript.className} text-2xl md:text-6xl text-[#2C2C2C]`}
             >
               #MARGAfoundheronlyLAUve
             </h2>
