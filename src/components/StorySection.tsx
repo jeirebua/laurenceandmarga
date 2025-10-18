@@ -11,7 +11,7 @@ function StorySection() {
           <h2
             className={`${dancingScript.className} text-5xl md:text-7xl text-[#2C2C2C] relative inline-block`}
           >
-            Our story
+            Our Story
             {/* Underline decoration */}
             <svg
               className="absolute left-0 -bottom-1 md:-bottom-2 w-full"

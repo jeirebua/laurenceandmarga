@@ -41,7 +41,7 @@ function GiftRegistrySection() {
           <div className="space-y-6" data-aos="fade-right" data-aos-delay="200">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-md mx-auto lg:mx-0">
               {/* GCash QR */}
-              <div className="bg-white p-4 md:p-6 rounded-lg">
+              <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg">
                 <div className="relative aspect-square mb-3">
                   <Image
                     src="/gift-registry-gcash.jpeg"
@@ -58,7 +58,7 @@ function GiftRegistrySection() {
               </div>
 
               {/* BPI QR */}
-              <div className="bg-white p-4 md:p-6 rounded-lg">
+              <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg">
                 <div className="relative aspect-square mb-3">
                   <Image
                     src="/gift-registry-bpi.jpeg"

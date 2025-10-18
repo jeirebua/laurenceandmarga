@@ -1,5 +1,6 @@
 import { dancingScript, montserrat } from "@/common/fonts";
 import React from "react";
+import Image from "next/image";
 
 function FAQSection() {
   const faqs = [
@@ -81,6 +82,50 @@ function FAQSection() {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Venue Directions QR Codes */}
+        <div className="mt-16 md:mt-24" data-aos="fade-up">
+          <h3
+            className={`${dancingScript.className} text-3xl md:text-4xl text-[#2C2C2C] text-center mb-12`}
+          >
+            Venue Directions
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-md mx-auto">
+            {/* Church QR Code */}
+            <div className="bg-white p-4 md:p-6 rounded-lg">
+              <div className="relative aspect-square mb-3">
+                <Image
+                  src="/qr-church.png"
+                  alt="Church Direction QR Code"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <p
+                className={`${montserrat.className} text-center text-sm md:text-base font-medium text-[#2C2C2C]`}
+              >
+                Church Ceremony
+              </p>
+            </div>
+
+            {/* Reception QR Code */}
+            <div className="bg-white p-4 md:p-6 rounded-lg">
+              <div className="relative aspect-square mb-3">
+                <Image
+                  src="/qr-reception.png"
+                  alt="Reception Venue QR Code"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <p
+                className={`${montserrat.className} text-center text-sm md:text-base font-medium text-[#2C2C2C]`}
+              >
+                Reception Venue
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
