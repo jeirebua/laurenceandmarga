@@ -1,10 +1,46 @@
+"use client";
+
 import { dancingScript, montserrat } from "@/common/fonts";
 import React from "react";
 import Image from "next/image";
 
 function StorySection() {
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const parallaxElements = document.querySelectorAll('[data-parallax-speed]');
+      parallaxElements.forEach((element) => {
+        const speed = parseFloat((element as HTMLElement).dataset.parallaxSpeed || '0');
+        const rect = element.getBoundingClientRect();
+
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          const scrolled = window.scrollY;
+          const yPos = -(scrolled * speed);
+          (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section className="bg-[#FAEFC5] py-20 md:py-32 relative overflow-hidden">
+      {/* Decorative Parallax Elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div
+          data-parallax-speed="0.09"
+          className="absolute top-40 right-10 w-96 h-96 bg-[#C98858]/10 rounded-full blur-3xl transition-transform"
+        />
+        <div
+          data-parallax-speed="0.11"
+          className="absolute bottom-20 left-16 w-72 h-72 bg-[#1C6B55]/8 rounded-full blur-3xl transition-transform"
+        />
+        <div
+          data-parallax-speed="0.07"
+          className="absolute top-1/2 right-1/4 w-48 h-48 bg-[#2C2C2C]/5 rounded-full blur-2xl transition-transform"
+        />
+      </div>
       <div className="container mx-auto px-6 md:px-12 max-w-5xl relative z-10">
         {/* Section Title */}
         <div className="mb-16 md:mb-24" data-aos="fade-up">

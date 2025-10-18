@@ -5,9 +5,9 @@ function Footer() {
   return (
     <footer className="bg-[#E8DCC8] py-12 md:py-16 relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 max-w-6xl relative z-10">
-        <div className="text-center space-y-4">
+        <div className="text-center">
           {/* Wedding Hashtag */}
-          <div data-aos="fade-up">
+          <div data-aos="fade-up" className="mb-6">
             <p
               className={`${montserrat.className} text-sm md:text-base text-[#4A4A4A] uppercase tracking-wide mb-2`}
             >
@@ -16,7 +16,7 @@ function Footer() {
             <h2
               className={`${dancingScript.className} text-4xl md:text-6xl text-[#2C2C2C]`}
             >
-              #MargafoundherforeverLauve
+              #MARGAfoundheronlyLAUve
             </h2>
           </div>
 
@@ -26,7 +26,7 @@ function Footer() {
           </div>
 
           {/* Copyright */}
-          <div data-aos="fade-up" data-aos-delay="200">
+          <div data-aos="fade-up" data-aos-delay="200" className="pt-2">
             <p
               className={`${montserrat.className} text-xs md:text-sm text-[#4A4A4A] font-light`}
             >

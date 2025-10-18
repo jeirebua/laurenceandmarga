@@ -1,7 +1,28 @@
+"use client";
+
 import { dancingScript, montserrat } from "@/common/fonts";
 import React from "react";
 
 function ScheduleSection() {
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const parallaxElements = document.querySelectorAll('[data-parallax-speed]');
+      parallaxElements.forEach((element) => {
+        const speed = parseFloat((element as HTMLElement).dataset.parallaxSpeed || '0');
+        const rect = element.getBoundingClientRect();
+
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          const scrolled = window.scrollY;
+          const yPos = -(scrolled * speed);
+          (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const events = [
     {
       time: "2:30 PM",
@@ -31,6 +52,17 @@ function ScheduleSection() {
 
   return (
     <section className="bg-[#E8DCC8] py-20 md:py-32 relative overflow-hidden">
+      {/* Decorative Parallax Elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div
+          data-parallax-speed="0.08"
+          className="absolute top-10 left-16 w-80 h-80 bg-[#1C6B55]/10 rounded-full blur-3xl transition-transform"
+        />
+        <div
+          data-parallax-speed="0.12"
+          className="absolute bottom-32 right-20 w-64 h-64 bg-[#C98858]/15 rounded-full blur-3xl transition-transform"
+        />
+      </div>
       <div className="container mx-auto px-6 md:px-12 max-w-6xl relative z-10">
         {/* Section Title */}
         <div className="mb-16 md:mb-24" data-aos="fade-up">

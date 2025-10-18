@@ -1,10 +1,42 @@
+"use client";
+
 import { dancingScript, montserrat } from "@/common/fonts";
 import React from "react";
 import Image from "next/image";
 
 function GiftRegistrySection() {
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const parallaxElements = document.querySelectorAll('[data-parallax-speed]');
+      parallaxElements.forEach((element) => {
+        const speed = parseFloat((element as HTMLElement).dataset.parallaxSpeed || '0');
+        const rect = element.getBoundingClientRect();
+
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          const scrolled = window.scrollY;
+          const yPos = -(scrolled * speed);
+          (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section className="bg-[#1C3A3F] py-20 md:py-32 relative overflow-hidden text-white">
+      {/* Decorative Parallax Elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div
+          data-parallax-speed="0.12"
+          className="absolute top-32 left-20 w-72 h-72 bg-white/5 rounded-full blur-3xl transition-transform"
+        />
+        <div
+          data-parallax-speed="0.08"
+          className="absolute bottom-20 right-16 w-56 h-56 bg-[#E8DCC8]/10 rounded-full blur-2xl transition-transform"
+        />
+      </div>
       <div className="container mx-auto px-6 md:px-12 max-w-6xl relative z-10">
         {/* Section Title */}
         <div className="text-center mb-12 md:mb-16" data-aos="fade-up">
