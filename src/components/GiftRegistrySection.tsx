@@ -39,7 +39,7 @@ function GiftRegistrySection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-12 md:mb-16">
           {/* QR Codes - Left Side */}
           <div className="space-y-6" data-aos="fade-right" data-aos-delay="200">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-md mx-auto lg:mx-0">
+            <div className="grid grid-cols-2 gap-6 max-w-md mx-auto lg:mx-0">
               {/* GCash QR */}
               <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg">
                 <div className="relative aspect-square mb-3">

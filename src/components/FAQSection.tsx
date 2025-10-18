@@ -91,7 +91,7 @@ function FAQSection() {
           >
             Venue Directions
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-md mx-auto">
+          <div className="grid grid-cols-2 gap-6 max-w-md mx-auto">
             {/* Church QR Code */}
             <div className="bg-white p-4 md:p-6 rounded-lg">
               <div className="relative aspect-square mb-3">

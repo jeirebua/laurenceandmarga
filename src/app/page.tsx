@@ -1,4 +1,5 @@
 import FAQSection from "@/components/FAQSection";
+import Footer from "@/components/Footer";
 import GiftRegistrySection from "@/components/GiftRegistrySection";
 import HeroSection from "@/components/HeroSection";
 import ScheduleSection from "@/components/ScheduleSection";
@@ -12,6 +13,7 @@ export default function Home() {
       <ScheduleSection />
       <FAQSection />
       <GiftRegistrySection />
+      <Footer />
     </div>
   );
 }
